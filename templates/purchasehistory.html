@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        {% for purchse in data_list %}
+        <div style="border: 1px solid red;">
+            <p>{{purchse.userid.username}}</p>
+        <p>{{purchse.product.name}}</p>
+        <p>{{purchse.quantity}}</p>
+        <p>{{purchse.totalamount}}</p>
+        <a href="{%url 'Singleproduct' product.id %}">Show single</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
